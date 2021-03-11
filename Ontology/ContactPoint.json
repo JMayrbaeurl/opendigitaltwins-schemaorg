@@ -1,0 +1,108 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:ContactPoint;1",
+    "@type": "Interface",
+    "displayName": "ContactPoint",
+    "description": "A contact point—for example, a Customer Complaints department.",
+    "comment": "Model 'ContactPoint' from Schema.org. See https://schema.org/ContactPoint",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:StructuredValue;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "areaServed",
+            "displayName": "Area served",
+            "description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+            "comment": "Schema.org Type: AdministrativeArea or GeoShape or Place or Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "availableLanguage",
+            "displayName": "Available language",
+            "description": "A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. See also inLanguage",
+            "comment": "Schema.org Type: Language or Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "contactOption",
+            "displayName": "Contact Option",
+            "description": "An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).",
+            "comment": "Schema.org Type: ContactPointOption (Enumeration)",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "hearingImpairedSupported",
+                        "displayName": "Hearing Impaired Supported",
+                        "enumValue": "HearingImpairedSupported"
+                    }, 
+                    {
+                        "name": "tollFree",
+                        "displayName": "Toll free",
+                        "enumValue": "TollFree"
+                    }
+                ]
+            },
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "contactType",
+            "displayName": "Contact type",
+            "description": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "email",
+            "displayName": "Email",
+            "description": "Email address.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name" : "faxNumber",
+            "displayName": "Fax number",
+            "description": "The fax number.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Component",
+            "name": "hoursAvailable",
+            "displayName": "Hours available",
+            "description": "The hours during which this service or contact is available.",
+            "comment": "Schema.org Type: OpeningHoursSpecification",
+            "schema": "dtmi:digitaltwins:schema_org:schemas:OpeningHoursSpecification;1"
+        },
+        {
+            "@type": "Property",
+            "name": "productSupported",
+            "displayName": "Product supported",
+            "description": "The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. \"iPhone\") or a general category of products or services (e.g. \"smartphones\").",
+            "comment": "Schema.org Type: Product or Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "telephone",
+            "displayName": "Telephone",
+            "description": "The telephone number.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

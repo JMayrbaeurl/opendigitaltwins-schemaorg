@@ -1,0 +1,11 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:Intangible;1",
+    "@type": "Interface",
+    "displayName": "Intangible",
+    "description": "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.",
+    "comment": "Model 'Intangible' from Schema.org. See https://schema.org/Intangible",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:Thing;1",
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

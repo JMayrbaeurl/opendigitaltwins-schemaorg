@@ -1,0 +1,118 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:Thing;1",
+    "@type": "Interface",
+    "displayName": "Thing",
+    "description": "The most generic type of item.",
+    "comment": "Model 'Thing' from Schema.org. See https://schema.org/Thing",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "additionalType",
+            "displayName": "Additional type",
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "comment": "Schema.org Type: URL",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "alternateName",
+            "displayName": "Alternate name",
+            "description": "An alias for the item.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "description",
+            "displayName": "Description",
+            "description": "A description of the item.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "disambiguatingDescription",
+            "displayName": "Disambiguating description",
+            "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "identifier",
+            "displayName": "Identifier",
+            "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+            "comment": "Schema.org Type: PropertyValue or Text or URL",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "image",
+            "displayName": "Image",
+            "description": "An image of the item. This can be a URL or a fully described ImageObject.",
+            "comment": "Schema.org Type: ImageObject or URL",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "mainEntityOfPage",
+            "displayName": "Main entity of page",
+            "description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property: mainEntity",
+            "comment": "Schema.org Type: CreativeWork or URL",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "name",
+            "displayName": "Name",
+            "description": "The name of the item.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "potentialAction",
+            "displayName": "Potential action",
+            "description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+            "comment": "Schema.org Type: Action -> TODO Replace with relationship to Action model",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "sameAs",
+            "displayName": "Same as",
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "comment": "Schema.org Type: URL",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "subjectOf",
+            "displayName": "Subject of",
+            "description": "A CreativeWork or Event about this Thing. Inverse property: about",
+            "comment": "Schema.org Type: CreativeWork or Event -> TODO Replace with relationship?",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "url",
+            "displayName": "Url",
+            "description": "URL of the item.",
+            "comment": "Schema.org Type: URL",
+            "schema": "string",
+            "writable": true
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

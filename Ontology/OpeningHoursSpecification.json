@@ -1,0 +1,98 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:OpeningHoursSpecification;1",
+    "@type": "Interface",
+    "displayName": "OpeningHoursSpecification",
+    "description": "A structured value providing information about the opening hours of a place or a certain service inside a place. The place is open if the opens property is specified, and closed otherwise. If the value for the closes property is less than the value for the opens property then the hour range is assumed to span over the next day.",
+    "comment": "Model 'OpeningHoursSpecification' from Schema.org. See https://schema.org/OpeningHoursSpecification",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:StructuredValue;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "closes",
+            "displayName": "Closes",
+            "description": "The closing hour of the place or service on the given day(s) of the week.",
+            "comment": "Schema.org Type: Time",
+            "schema": "time",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "dayOfWeek",
+            "displayName": "Day of week",
+            "description": "The day of the week for which these opening hours are valid.",
+            "comment": "Schema.org Type: DayOfWeek (Enumeration)",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "monday",
+                        "displayName": "Monday",
+                        "enumValue": "Monday"
+                    },
+                    {
+                        "name": "tuesday",
+                        "displayName": "Tuesday",
+                        "enumValue": "Tuesday"
+                    },
+                    {
+                        "name": "wednesday",
+                        "displayName": "Wednesday",
+                        "enumValue": "Wednesday"
+                    },
+                    {
+                        "name": "thursday",
+                        "displayName": "Thursday",
+                        "enumValue": "Thursday"
+                    },
+                    {
+                        "name": "friday",
+                        "displayName": "Friday",
+                        "enumValue": "Friday"
+                    },
+                    {
+                        "name": "saturday",
+                        "displayName": "Saturday",
+                        "enumValue": "Saturday"
+                    },
+                    {
+                        "name": "sunday",
+                        "displayName": "Sunday",
+                        "enumValue": "Sunday"
+                    }
+                ]
+            },
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "opens",
+            "displayName": "Opens",
+            "description": "The opening hour of the place or service on the given day(s) of the week.",
+            "comment": "Schema.org Type: Time",
+            "schema": "time",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "validFrom",
+            "displayName": "Valid from",
+            "description": "The date when the item becomes valid.",
+            "comment": "Schema.org Type: Date or DateTime",
+            "schema": "dateTime",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "validThrough",
+            "displayName": "Valid through",
+            "description": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+            "comment": "Schema.org Type: Date or DateTime",
+            "schema": "dateTime",
+            "writable": true
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

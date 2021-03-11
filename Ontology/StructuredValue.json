@@ -1,0 +1,11 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:StructuredValue;1",
+    "@type": "Interface",
+    "displayName": "StructuredValue",
+    "description": "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.",
+    "comment": "Model 'StructuredValue' from Schema.org. See https://schema.org/StructuredValue",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:Intangible;1",
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}
