@@ -1,0 +1,57 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:DefinedRegion;1",
+    "@type": "Interface",
+    "displayName": "DefinedRegion",
+    "description": "A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes. Examples: a delivery destination when shopping. Region where regional pricing is configured. ",
+    "comment": "Model 'DefinedRegion' from Schema.org. See https://schema.org/DefinedRegion",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:StructuredValue;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "addressCountry",
+            "displayName": "Address country",
+            "description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+            "comment": "Schema.org Type: Country or Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "addressRegion",
+            "displayName": "Address region",
+            "description": "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "postalCode",
+            "displayName": "Postal code",
+            "description": "The postal code. For example, 94043.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "postalCodePrefix",
+            "displayName": "Postal code prefix",
+            "description": "A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Component",
+            "name": "postalCodeRange",
+            "displayName": "Postal code range",
+            "description": "A defined range of postal codes.",
+            "comment": "Schema.org Type: ostalCodeRangeSpecification",
+            "schema": "dtmi:digitaltwins:schema_org:schemas:PostalCodeRangeSpecification;1"
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

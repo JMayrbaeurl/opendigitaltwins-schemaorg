@@ -1,0 +1,67 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:PostalAddress;1",
+    "@type": "Interface",
+    "displayName": "PostalAddress",
+    "description": "The mailing address.",
+    "comment": "Model 'PostalAddress' from Schema.org. See https://schema.org/PostalAddress",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:ContactPoint;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "addressCountry",
+            "displayName": "Address country",
+            "description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+            "comment": "Schema.org Type: Country or Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "addressLocality",
+            "displayName": "Address loyality",
+            "description": "The locality in which the street address is, and which is in the region. For example, Mountain View.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "addressRegion",
+            "displayName": "Address region",
+            "description": "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "postOfficeBoxNumber",
+            "displayName": "Post office box number",
+            "description": "The post office box number for PO box addresses.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "postalCode",
+            "displayName": "Postal code",
+            "description": "The postal code. For example, 94043.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "streetAddress",
+            "displayName": "Street name",
+            "description": "The street address. For example, 1600 Amphitheatre Pkwy.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

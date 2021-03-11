@@ -1,0 +1,11 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:Language;1",
+    "@type": "Interface",
+    "displayName": "Language",
+    "description": "Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in BCP 47 can be used via the alternateName property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using ComputerLanguage.",
+    "comment": "Model 'Language' from Schema.org. See https://schema.org/Language",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:Intangible;1",
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

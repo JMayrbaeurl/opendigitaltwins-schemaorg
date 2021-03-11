@@ -1,0 +1,66 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:GeoCoordinates;1",
+    "@type": "Interface",
+    "displayName": "GeoCoordinates",
+    "description": "The geographic coordinates of a place or event.",
+    "comment": "Model 'GeoCoordinates' from Schema.org. See https://schema.org/GeoCoordinates",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:StructuredValue;1",
+    "contents": [
+        {
+            "@type": "Component",
+            "name": "address",
+            "displayName": "Address",
+            "description": "Physical address of the item.",
+            "comment": "Schema.org Type: PostalAddress or Text",
+            "schema": "dtmi:digitaltwins:schema_org:schemas:PostalAddress;1"
+        },
+        {
+            "@type": "Property",
+            "name": "addressCountry",
+            "displayName": "Address country",
+            "description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+            "comment": "Schema.org Type: Country or Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "elevation",
+            "displayName": "Elevation",
+            "description": "The elevation of a location (WGS 84). Values may be of the form 'NUMBER UNITOFMEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters.",
+            "comment": "Schema.org Type: Number or Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "latitude",
+            "displayName": "Latitude",
+            "description": "The latitude of a location. For example 37.42242 (WGS 84).",
+            "comment": "Schema.org Type: Number or Text",
+            "schema": "double",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "longitude",
+            "displayName": "Longitude",
+            "description": "The longitude of a location. For example -122.08585 (WGS 84).",
+            "comment": "Schema.org Type: Number or Text",
+            "schema": "double",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "postalCode",
+            "displayName": "Postal code",
+            "description": "The postal code. For example, 94043.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}

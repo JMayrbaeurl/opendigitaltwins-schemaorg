@@ -1,0 +1,31 @@
+{
+    "@id": "dtmi:digitaltwins:schema_org:schemas:PostalCodeRangeSpecification;1",
+    "@type": "Interface",
+    "displayName": "PostalCodeRangeSpecification",
+    "description": "Indicates a range of postalcodes, usually defined as the set of valid codes between postalCodeBegin and postalCodeEnd, inclusively.",
+    "comment": "Model 'PostalCodeRangeSpecification' from Schema.org. See https://schema.org/PostalCodeRangeSpecification",
+    "extends": "dtmi:digitaltwins:schema_org:schemas:StructuredValue;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "postalCodeBegin",
+            "displayName": "Postal code begin",
+            "description": "First postal code in a range (included).",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "postalCodeEnd",
+            "displayName": "Postal code end",
+            "description": "Last postal code in the range (included). Needs to be after postalCodeBegin.",
+            "comment": "Schema.org Type: Text",
+            "schema": "string",
+            "writable": true
+        }
+    ],
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ]
+}
